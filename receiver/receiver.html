@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+
+        <center>
+        <div id="input-div">
+            <input placeholder="Enter username..." type="text" id="username-input" /> <!--text field to enter username-->
+            <br><br>
+            <button onclick="joinCall()">Join Call</button>  <!--button to join call with entered user name-->
+        </div>
+        </center>
+
+        <div id="video-call-div"><!--this div is first disabled-->
+            <video muted id="local-video" autoplay></video><!--your video-->
+            <video id="remote-video" autoplay></video><!--peer's video-->
+
+            <!--feature buttons-->
+            <div class="call-action-div" style="align-items: right; background-color: rgb(46, 45, 45); max-height: 30%; border-radius: 5px; top: 350px;">
+                <br>
+                <button onclick="muteVideo()">Mute Video</button><br><br>
+                <button onclick="muteAudio()">Mute Audio</button><br><br>
+                <a href="../whiteboard.html" target="_blank" rel="noopener noreferrer"><button>Whiteboard</button></a><br><br>
+                <a href="../todolist.html" target="_blank" rel="noopener noreferrer"><button>To Do List</button></a><br><br>    
+            </div>
+        </div>
+
+        <script src="./receiver.js"></script>
+    </body>
+
+</html>
